@@ -18,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="121" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="nfq-Fe-X92">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="121" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="nfq-Fe-X92">
                                 <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -26,7 +26,7 @@
                                         <rect key="frame" x="0.0" y="92" width="600" height="121"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="zFG-A7-RkQ" id="7n2-fs-9kz">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="120.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="121"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PPX-qU-ocn">
@@ -138,20 +138,57 @@
                                     <constraint firstAttribute="width" constant="200" id="cBa-KB-qx4"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lek-CB-fwb">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="Lek-CB-fwb">
                                 <rect key="frame" x="20" y="302" width="560" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="D3I-Qy-wHX"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-BoldItalic" family="Helvetica Neue" pointSize="18"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-BoldItalic" family="Helvetica Neue" pointSize="20"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qfv-6U-D2n">
+                                <rect key="frame" x="20" y="345" width="560" height="164"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="164" id="y0X-JM-ASf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ozn-RL-bKg">
+                                <rect key="frame" x="210" y="539" width="180" height="42"/>
+                                <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="180" id="BwC-Ui-w12"/>
+                                    <constraint firstAttribute="height" constant="42" id="ZFy-YS-Na4"/>
+                                    <constraint firstAttribute="width" constant="180" id="d1K-Zw-Opm"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="42" id="shu-Z9-Gsn"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                <state key="normal" title="Movie URL">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="BwC-Ui-w12"/>
+                                        <exclude reference="shu-Z9-Gsn"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="movieURLBtnPressed:" destination="31s-JO-dZc" eventType="touchUpInside" id="Z8l-3h-H64"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="Qfv-6U-D2n" firstAttribute="top" secondItem="Lek-CB-fwb" secondAttribute="bottom" constant="8" id="1H1-ca-HOk"/>
+                            <constraint firstItem="Ozn-RL-bKg" firstAttribute="centerX" secondItem="kbM-jx-Vqw" secondAttribute="centerX" id="5hp-UP-Zv0"/>
                             <constraint firstItem="Lek-CB-fwb" firstAttribute="trailing" secondItem="kbM-jx-Vqw" secondAttribute="trailingMargin" id="AZw-tM-jNK"/>
+                            <constraint firstItem="Ozn-RL-bKg" firstAttribute="top" secondItem="Qfv-6U-D2n" secondAttribute="bottom" constant="30" id="C4D-jY-3aS"/>
                             <constraint firstItem="gW5-ll-n3n" firstAttribute="top" secondItem="I6J-w0-uMZ" secondAttribute="bottom" constant="30" id="W9s-df-3YE"/>
+                            <constraint firstItem="Qfv-6U-D2n" firstAttribute="trailing" secondItem="kbM-jx-Vqw" secondAttribute="trailingMargin" id="Wjh-kv-2q8"/>
+                            <constraint firstItem="Qfv-6U-D2n" firstAttribute="leading" secondItem="kbM-jx-Vqw" secondAttribute="leadingMargin" id="fNV-xU-AAA"/>
                             <constraint firstItem="Lek-CB-fwb" firstAttribute="leading" secondItem="kbM-jx-Vqw" secondAttribute="leadingMargin" id="hAO-Qg-bav"/>
                             <constraint firstItem="gW5-ll-n3n" firstAttribute="centerX" secondItem="kbM-jx-Vqw" secondAttribute="centerX" id="kcM-DB-NiH"/>
                             <constraint firstItem="Lek-CB-fwb" firstAttribute="top" secondItem="gW5-ll-n3n" secondAttribute="bottom" constant="8" id="vvS-Z9-lHH"/>
@@ -159,7 +196,9 @@
                     </view>
                     <connections>
                         <outlet property="movieImage" destination="gW5-ll-n3n" id="zal-Kx-zmH"/>
+                        <outlet property="moviePlot" destination="Qfv-6U-D2n" id="qS8-ay-3AW"/>
                         <outlet property="movieTitle" destination="Lek-CB-fwb" id="iES-SX-LXv"/>
+                        <outlet property="movieURLBtn" destination="Ozn-RL-bKg" id="2Z4-5o-ciK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wT8-Q1-3Ks" userLabel="First Responder" sceneMemberID="firstResponder"/>
