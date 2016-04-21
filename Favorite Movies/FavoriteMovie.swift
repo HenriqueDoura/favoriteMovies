@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 
 class FavoriteMovie: NSObject, NSCoding {
+    
     private var _movieTitle: String = ""
     private var _movieReason: String = ""
     private var _movieURL: String = ""

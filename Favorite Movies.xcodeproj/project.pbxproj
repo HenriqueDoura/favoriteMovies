@@ -67,9 +67,7 @@
 				BE6FEF5C1CC848FF003C1AF7 /* View */,
 				BE6FEF5D1CC84902003C1AF7 /* Controller */,
 				BE6FEF491CC848CE003C1AF7 /* AppDelegate.swift */,
-				BE6FEF4D1CC848CE003C1AF7 /* Main.storyboard */,
 				BE6FEF501CC848CE003C1AF7 /* Assets.xcassets */,
-				BE6FEF521CC848CE003C1AF7 /* LaunchScreen.storyboard */,
 				BE6FEF551CC848CE003C1AF7 /* Info.plist */,
 			);
 			path = "Favorite Movies";
@@ -87,6 +85,8 @@
 			isa = PBXGroup;
 			children = (
 				BE6FEF631CC84F0D003C1AF7 /* FavoriteMovieCell.swift */,
+				BE6FEF4D1CC848CE003C1AF7 /* Main.storyboard */,
+				BE6FEF521CC848CE003C1AF7 /* LaunchScreen.storyboard */,
 			);
 			name = View;
 			sourceTree = "<group>";

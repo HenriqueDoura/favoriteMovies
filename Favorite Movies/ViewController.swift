@@ -16,7 +16,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         super.viewDidLoad()
             tableView.delegate = self
             tableView.dataSource = self
-        
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
             DataService.instance.loadMovies()
             tableView.reloadData()
     }
@@ -39,6 +42,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         } else {
             return FavoriteMovieCell()
         }
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
     }
 }
 

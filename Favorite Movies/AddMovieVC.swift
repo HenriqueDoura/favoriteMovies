@@ -22,6 +22,10 @@ class AddMovieVC: UIViewController, UIImagePickerControllerDelegate, UINavigatio
     
     override func viewDidLoad() {
         super.viewDidLoad()
+            saveBtn.layer.cornerRadius = 25
+            websiteBtn.layer.cornerRadius = 25
+            movieImage.layer.cornerRadius = movieImage.frame.width / 2
+            movieImage.clipsToBounds = true
     }
     
     @IBAction func addImageBtnPressed(sender: AnyObject) {
