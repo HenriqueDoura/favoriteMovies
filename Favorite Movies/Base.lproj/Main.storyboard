@@ -89,7 +89,6 @@
                                             <outlet property="movieDescription" destination="4EW-2n-J2z" id="nLX-tJ-oL2"/>
                                             <outlet property="movieImg" destination="PPX-qU-ocn" id="FXd-hH-bqZ"/>
                                             <outlet property="movieTitle" destination="EPA-wF-wJs" id="nfw-Vu-lZl"/>
-                                            <segue destination="31s-JO-dZc" kind="show" id="7cB-DE-aLi"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -113,16 +112,17 @@
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="nfq-Fe-X92" id="OdJ-rk-WWj"/>
+                        <segue destination="31s-JO-dZc" kind="show" identifier="goToMovieInfoVC" id="XiL-3M-Okl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1154" y="-353"/>
         </scene>
-        <!--View Controller-->
+        <!--Movie InfoVC-->
         <scene sceneID="lzP-Gl-acD">
             <objects>
-                <viewController id="31s-JO-dZc" sceneMemberID="viewController">
+                <viewController id="31s-JO-dZc" customClass="MovieInfoVC" customModule="Favorite_Movies" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="I6J-w0-uMZ"/>
                         <viewControllerLayoutGuide type="bottom" id="yqq-ml-mDa"/>
@@ -138,17 +138,33 @@
                                     <constraint firstAttribute="width" constant="200" id="cBa-KB-qx4"/>
                                 </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lek-CB-fwb">
+                                <rect key="frame" x="20" y="302" width="560" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="D3I-Qy-wHX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-BoldItalic" family="Helvetica Neue" pointSize="18"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="Lek-CB-fwb" firstAttribute="trailing" secondItem="kbM-jx-Vqw" secondAttribute="trailingMargin" id="AZw-tM-jNK"/>
                             <constraint firstItem="gW5-ll-n3n" firstAttribute="top" secondItem="I6J-w0-uMZ" secondAttribute="bottom" constant="30" id="W9s-df-3YE"/>
+                            <constraint firstItem="Lek-CB-fwb" firstAttribute="leading" secondItem="kbM-jx-Vqw" secondAttribute="leadingMargin" id="hAO-Qg-bav"/>
                             <constraint firstItem="gW5-ll-n3n" firstAttribute="centerX" secondItem="kbM-jx-Vqw" secondAttribute="centerX" id="kcM-DB-NiH"/>
+                            <constraint firstItem="Lek-CB-fwb" firstAttribute="top" secondItem="gW5-ll-n3n" secondAttribute="bottom" constant="8" id="vvS-Z9-lHH"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="movieImage" destination="gW5-ll-n3n" id="zal-Kx-zmH"/>
+                        <outlet property="movieTitle" destination="Lek-CB-fwb" id="iES-SX-LXv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wT8-Q1-3Ks" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1154" y="354"/>
+            <point key="canvasLocation" x="1154" y="418"/>
         </scene>
         <!--Add MovieVC-->
         <scene sceneID="Hoo-OX-6VQ">

@@ -16,6 +16,7 @@
 		BE6FEF621CC84937003C1AF7 /* FavoriteMovie.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6FEF611CC84937003C1AF7 /* FavoriteMovie.swift */; };
 		BE6FEF641CC84F0D003C1AF7 /* FavoriteMovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6FEF631CC84F0D003C1AF7 /* FavoriteMovieCell.swift */; };
 		BE6FEF661CC8510C003C1AF7 /* AddMovieVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6FEF651CC8510C003C1AF7 /* AddMovieVC.swift */; };
+		BE6FEF681CC85BE0003C1AF7 /* MovieInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6FEF671CC85BE0003C1AF7 /* MovieInfoVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		BE6FEF611CC84937003C1AF7 /* FavoriteMovie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteMovie.swift; sourceTree = "<group>"; };
 		BE6FEF631CC84F0D003C1AF7 /* FavoriteMovieCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteMovieCell.swift; sourceTree = "<group>"; };
 		BE6FEF651CC8510C003C1AF7 /* AddMovieVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddMovieVC.swift; sourceTree = "<group>"; };
+		BE6FEF671CC85BE0003C1AF7 /* MovieInfoVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieInfoVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 			children = (
 				BE6FEF4B1CC848CE003C1AF7 /* ViewController.swift */,
 				BE6FEF651CC8510C003C1AF7 /* AddMovieVC.swift */,
+				BE6FEF671CC85BE0003C1AF7 /* MovieInfoVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -181,6 +184,7 @@
 			files = (
 				BE6FEF601CC84912003C1AF7 /* DataService.swift in Sources */,
 				BE6FEF4C1CC848CE003C1AF7 /* ViewController.swift in Sources */,
+				BE6FEF681CC85BE0003C1AF7 /* MovieInfoVC.swift in Sources */,
 				BE6FEF621CC84937003C1AF7 /* FavoriteMovie.swift in Sources */,
 				BE6FEF4A1CC848CE003C1AF7 /* AppDelegate.swift in Sources */,
 				BE6FEF641CC84F0D003C1AF7 /* FavoriteMovieCell.swift in Sources */,
@@ -300,6 +304,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Favorite Movies/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Henrique.favoriteMovies.Favorite-Movies";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -311,6 +316,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Favorite Movies/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Henrique.favoriteMovies.Favorite-Movies";
 				PRODUCT_NAME = "$(TARGET_NAME)";

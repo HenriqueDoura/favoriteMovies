@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AddMovieVC: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class AddMovieVC: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate {
 
     @IBOutlet weak var movieTitle: UITextField!
     @IBOutlet weak var movieReason: UITextField!
@@ -47,7 +47,7 @@ class AddMovieVC: UIViewController, UIImagePickerControllerDelegate, UINavigatio
     @IBAction func saveBtnPressed(sender: AnyObject) {
         if let title = movieTitle.text, let reason = movieReason.text, let plot = moviePlot.text, let url = movieURL.text, let image = movieImage.image {
             let imgData = UIImagePNGRepresentation(image)!
-            DataService.instance.saveMovie(FavoriteMovie(title: title, reason: reason, url: url, plot: plot, image: imgData))
+            DataService.instance.addMovie(FavoriteMovie(title: title, reason: reason, url: url, plot: plot, image: imgData))
             
             self.navigationController?.popViewControllerAnimated(true)
         } else {
@@ -64,5 +64,14 @@ class AddMovieVC: UIViewController, UIImagePickerControllerDelegate, UINavigatio
     func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage, editingInfo: [String : AnyObject]?) {
         movieImage.image = image
         picker.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        self.view.endEditing(true)
     }
 }

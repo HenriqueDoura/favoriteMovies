@@ -28,10 +28,19 @@ class DataService {
         }
     }
     
-    func saveMovie(movie: FavoriteMovie) {
-        _loadedMovies.append(movie)
-        
+    func saveMovies() {
         let movieData = NSKeyedArchiver.archivedDataWithRootObject(_loadedMovies)
         dft.setObject(movieData, forKey: "movies")
+    }
+    
+    func addMovie(movie: FavoriteMovie) {
+        _loadedMovies.append(movie)
+        
+        saveMovies()
+    }
+    
+    func deleteMovie(index: NSIndexPath) {
+        _loadedMovies.removeAtIndex(index.row)
+        saveMovies()
     }
 }
