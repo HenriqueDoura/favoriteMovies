@@ -23,7 +23,7 @@ class FavoriteMovieCell: UITableViewCell {
     
     func configureCell(movie: FavoriteMovie) {
         movieTitle.text = movie.movieTitle
-        movieDescription.text = movie.movieDescription
+        movieDescription.text = movie.moviePlot
         movieImg.image = imageFromData(movie)
     }
     
